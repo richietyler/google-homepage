@@ -2,37 +2,136 @@
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
+body {
+	font-family: Arial, sans-serif;
+	color: #000;
+	font-size: 13px;
+}
+
+header {
+	width:100%;
+	display:block;
+	height:80px;
+}
+
 a {
 	text-decoration: none;
 	height: 36px;
-    line-height: 27px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	margin: 0;
+	padding: 0px 30px;
+}
+
+nav a {
+	color: rgba(0,0,0,0.87);
+	margin-right:15px;
+}
+
+.leftnav {
+	float: left;
+	padding-top:20px;
+}
+
+.rightnav {
+	float: right;
+	padding-top:15px;
+}
+
+.menu {
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu {
+    background-image: url(https://ssl.gstatic.com/gb/images/i2_2ec824b0.png);
+    background-position: -132px -38px;
+    -webkit-background-size: 528px 68px;
+    background-size: 528px 68px;
+    opacity: .55;
+    height:30px;
+    width:30px;
+    vertical-align: middle;
+    text-indent:-9999px;
+}
+
+.menu:hover {
+	opacity: 1;
+}
+
+.signin {
+    border: 1px solid #4285f4;
+    font-weight: bold;
+    outline: none;
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    background: linear-gradient(top,#4387fd,#4683ea);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4387fd,endColorstr=#4683ea,GradientType=0);
+    display: inline-block;
+    line-height: 28px;
+    height:28px;
+    padding: 0 12px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    margin-right:0;
+    margin-left:0;
+}
+
+.signin:hover {
+	text-decoration:none;
 }
 
 .content {
-	max-width:584px;
+	margin-top:89px;
+	max-width:554px;
 	width: 100%;
 	margin: 0 auto;
 	display: block;
+	box-sizing: border-box;
 }
 
 img.gs-logo {
 	max-width:272px;
-	padding-top:109px;
+	padding-top:119px;
 	text-align:center;
 	margin: 0 auto;
 	display: block;
 }
 
+form {
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
 
 input[type=text] {
-	height:40px;
+	height:44px;
 	width: 100%;
 	border-radius:20px;
 	border: 1px solid #ddd;
 	margin: 20px 0;
 	padding: 0px 30px;
-	font-size:14px;
-	line-height: 40px;
+	font-size:16px;
+	line-height: 44px;
+	box-sizing: border-box;
 }
 
 input[type=text]:focus {
@@ -54,13 +153,13 @@ input[type=submit],
     cursor: pointer;
     font-family: arial,sans-serif;
     font-size: 14px;
-    margin: 11px 4px;
+    margin: 11px 3px;
     min-width: 54px;
     padding: 0 16px;
     text-align: center;
     height: 36px;
     line-height: 27px;
-    display:inline-block;
+    display:inline;
 }
 
 input[type=submit]:hover,
@@ -74,4 +173,59 @@ input[type=submit]:hover,
     border: 1px solid #c6c6c6;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     color: #222;
+}
+
+.center {
+	width:100%;
+	display: block;
+	text-align:center;
+}
+
+footer {
+	background: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    line-height: 40px;
+    position:fixed;
+    margin:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    box-sizing: border-box;
+}
+
+footer .nav {
+	padding: 0px;
+}
+
+footer .nav:nth-of-type(1) {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+footer p {
+	color: rgba(0,0,0,.54);
+	font-size:15px;
+	margin-left:30px;
+}
+
+footer .leftnav,
+footer .rightnav {
+	color: #5f6368;
+	padding-top:0;
+}
+
+footer .rightnav {
+	margin-right:30px;
+}
+
+footer a {
+	color: #5f6368;
+}
+
+footer .leftnav a {
+	padding-left: 30px;
+}
+
+
+footer .rightnav a {
+	padding-left: 30px;
 }
